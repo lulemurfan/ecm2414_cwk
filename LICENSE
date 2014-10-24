@@ -1,4 +1,4 @@
-Apache License
+Apache License*
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
@@ -64,8 +64,9 @@ Apache License
       subsequently incorporated within the Work.
 
    2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      this License, provided that you do not give this piece of work
+      anything less than a first, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, revocable
       copyright license to reproduce, prepare Derivative Works of,
       publicly display, publicly perform, sublicense, and distribute the
       Work and such Derivative Works in Source or Object form.
@@ -200,3 +201,4 @@ Apache License
    See the License for the specific language governing permissions and
    limitations under the License.
 
+*modified
