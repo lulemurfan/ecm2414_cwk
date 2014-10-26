@@ -54,21 +54,13 @@ public class BlackBag extends Bag
         pebbles = peb;
     }
     
-    void makeArray(int[] a){
-        int[] pebbles = new int[a.length];
-        for(int i=0; i<a.length;i++){
-            pebbles[i] = a[i];
-        }
-    }
-    
     void putPebbleInWhite(int peb)
     {
         corresponding.addPebble(peb);
     }
     
     void takeCorrespondingPebbles()
-    {   int[] a;
-        a = corresponding.takeBag(this);
-        //int[] pebbles = corresponding.takeBag(this);
+    {   
+        addPebbles(corresponding.takeBag());
     }
 }

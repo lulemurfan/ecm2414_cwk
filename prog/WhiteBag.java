@@ -2,7 +2,6 @@
 public class WhiteBag extends Bag
 {
     private int[] pebbles;
-    private int[] tmp;
     
     /**
      * Constructor for objects of class WhiteBag
@@ -21,12 +20,10 @@ public class WhiteBag extends Bag
         tmp[pebbles.length] = peb;
         pebbles = tmp;
     }
-    public int[] takeBag(BlackBag b)
+    public int[] takeBag()
     {
         int[] tmp = pebbles.clone();
         pebbles = new int[0];
-        b.makeArray(tmp);
-        
         return tmp;
         
    }
