@@ -1,19 +1,19 @@
 
 /**
- * Write a description of class WhitePebble here.
+ * Write a description of class EmptyBagException here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WhitePebble implements Pebble
+public class EmptyBagException
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class WhitePebble
+     * Constructor for objects of class EmptyBagException
      */
-    public WhitePebble()
+    public EmptyBagException()
     {
         // initialise instance variables
         x = 0;

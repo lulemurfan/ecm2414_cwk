@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=peb\ corres
+comment0.target=BlackBag(int[],\ WhiteBag)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ BlackBag\n
+comment1.params=
+comment1.target=int\ takePebble()
+comment2.params=peb
+comment2.target=void\ addPebbles(int[])
+comment2.text=\n\ Will\ take\ an\ array\ of\ pebbles\ from\ a\ White\ bag\n\ \n
+numComments=3
