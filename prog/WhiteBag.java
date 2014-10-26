@@ -1,33 +1,33 @@
 
-/**
- * Write a description of class WhiteBag here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class WhiteBag
+public class WhiteBag extends Bag
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private int[] pebbles;
+    private int[] tmp;
+    
     /**
      * Constructor for objects of class WhiteBag
      */
     public WhiteBag()
     {
-        // initialise instance variables
-        x = 0;
+        pebbles = new int[0];
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+
+    public void addPebble(int peb)
     {
-        // put your code here
-        return x + y;
+        int[] tmp = new int[pebbles.length+1];
+        for (int i = 0; i < pebbles.length; i++)
+            tmp[i] = pebbles[i];
+        tmp[pebbles.length] = peb;
+        pebbles = tmp;
     }
+    public int[] takeBag(BlackBag b)
+    {
+        int[] tmp = pebbles.clone();
+        pebbles = new int[0];
+        b.makeArray(tmp);
+        
+        return tmp;
+        
+   }
 }
