@@ -7,27 +7,28 @@
  */
 public class BlackBag
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private WhiteBag corresponding;
+    private int[] pebbles;
+    
     /**
      * Constructor for objects of class BlackBag
      */
-    public BlackBag()
+    public BlackBag(int[] peb, WhiteBag corres)
     {
-        // initialise instance variables
-        x = 0;
+        pebbles = peb;
+        corresponding = corres;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public int takePebble()
     {
-        // put your code here
-        return x + y;
+        return 0;
+    }
+    /**
+     * Will take an array of pebbles from a White bag
+     * 
+     */
+    public void addPebbles(int[] peb)
+    {
+        pebbles = peb;
     }
 }
