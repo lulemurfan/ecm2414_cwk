@@ -8,6 +8,7 @@ import java.util.Random;
 public class PebbleGame
 {
     public static BlackBag[] bagArray;
+    public static EventGeneratorThread generatorThread;
     public static void main(String[] args)
     {
         WhiteBag A = new WhiteBag();
@@ -20,6 +21,9 @@ public class PebbleGame
         bagArray[0] = new BlackBag(t1,A);
         bagArray[1] = new BlackBag(t2,B);
         bagArray[2] = new BlackBag(t3,C);
+        EventGeneratorThread generatorThread = new EventGeneratorThread();
+        generatorThread.start();
+        
     }
     class Player extends Thread
     {
@@ -37,8 +41,10 @@ public class PebbleGame
                     int weight = newPebble;
                     for (int i : hand)
                         weight += i;
-                    if (weight == 100)
-                    ;//event
+                    if (weight == 100){
+                        PebbleGame.generatorThread.fireWinnerEvent(new WinnerEvent(this));
+                        
+                    }
                     int a = rand.nextInt(10);
                     if (a == 9) {
                         PebbleGame.bagArray[n].putPebbleInWhite(newPebble);
