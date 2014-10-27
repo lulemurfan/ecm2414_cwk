@@ -16,8 +16,8 @@ public class BlackBag extends Bag
         pebbles = peb;
         corresponding = corres;
     }
-
-    public int takePebble throws E()    public int takePebble() throws EmptyBagException()
+    
+    public int takePebble() throws EmptyBagException{
     
         if (pebbles.length == 0 && corresponding.getLength() == 0) {
             throw new EmptyBagException();
@@ -40,7 +40,8 @@ public class BlackBag extends Bag
             
             return val;
         }
-    }}    
+    }
+    
    public int numberOfPebbles()
     {
         return pebbles.length;

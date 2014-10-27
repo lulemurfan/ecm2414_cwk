@@ -6,4 +6,6 @@ comment1.params=peb
 comment1.target=void\ addPebble(int)
 comment2.params=b
 comment2.target=int[]\ takeBag(BlackBag)
-numComments=3
+comment3.params=
+comment3.target=int\ getLength()
+numComments=4
