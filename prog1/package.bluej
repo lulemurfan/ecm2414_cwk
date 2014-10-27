@@ -23,6 +23,9 @@ dependency15.type=UsesDependency
 dependency16.from=WinnerEvent
 dependency16.to=PebbleGame
 dependency16.type=UsesDependency
+dependency17.from=WinnerEventListenerThread
+dependency17.to=PebbleGame
+dependency17.type=UsesDependency
 dependency2.from=WhiteBag
 dependency2.to=BlackBag
 dependency2.type=UsesDependency
@@ -47,6 +50,7 @@ dependency8.type=UsesDependency
 dependency9.from=WinnerEventListener
 dependency9.to=WinnerEvent
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 objectbench.height=76
 objectbench.width=925
 package.editor.height=611
@@ -54,6 +58,13 @@ package.editor.width=827
 package.editor.x=-3
 package.editor.y=0
 package.numDependencies=16
+=======
+package.editor.height=621
+package.editor.width=881
+package.editor.x=725
+package.editor.y=196
+package.numDependencies=17
+>>>>>>> origin/master
 package.numTargets=12
 package.showExtends=true
 package.showUses=true
@@ -66,7 +77,6 @@ target1.height=50
 target1.name=Bag
 target1.showInterface=false
 target1.type=AbstractTarget
-target1.typeParameters=
 target1.width=80
 target1.x=340
 target1.y=20
@@ -79,6 +89,7 @@ target10.name=IllegalFileFormatValueException
 target10.naviview.expanded=true
 target10.showInterface=false
 target10.type=ClassTarget
+<<<<<<< HEAD
 target10.typeParameters=
 target10.width=200
 target10.x=210
@@ -87,11 +98,21 @@ target11.editor.height=784
 target11.editor.width=901
 target11.editor.x=357
 target11.editor.y=106
+=======
+target10.width=200
+target10.x=250
+target10.y=290
+target11.editor.height=810
+target11.editor.width=901
+target11.editor.x=636
+target11.editor.y=198
+>>>>>>> origin/master
 target11.height=50
 target11.name=WinnerEventListenerThread
 target11.naviview.expanded=true
 target11.showInterface=false
 target11.type=ClassTarget
+<<<<<<< HEAD
 target11.typeParameters=
 target11.width=180
 target11.x=880
@@ -100,11 +121,21 @@ target12.editor.height=754
 target12.editor.width=1382
 target12.editor.x=-8
 target12.editor.y=-8
+=======
+target11.width=180
+target11.x=610
+target11.y=420
+target12.editor.height=700
+target12.editor.width=900
+target12.editor.x=950
+target12.editor.y=162
+>>>>>>> origin/master
 target12.height=50
 target12.name=WeveGotAWinnerException
 target12.naviview.expanded=true
 target12.showInterface=false
 target12.type=ClassTarget
+<<<<<<< HEAD
 target12.typeParameters=
 target12.width=180
 target12.x=490
@@ -113,15 +144,28 @@ target2.editor.height=784
 target2.editor.width=900
 target2.editor.x=282
 target2.editor.y=138
+=======
+target12.width=180
+target12.x=490
+target12.y=10
+target2.editor.height=549
+target2.editor.width=900
+target2.editor.x=932
+target2.editor.y=276
+>>>>>>> origin/master
 target2.height=50
 target2.name=WinnerEvent
 target2.naviview.expanded=true
 target2.showInterface=false
 target2.type=ClassTarget
-target2.typeParameters=
 target2.width=100
+<<<<<<< HEAD
 target2.x=790
 target2.y=200
+=======
+target2.x=570
+target2.y=280
+>>>>>>> origin/master
 target3.editor.height=715
 target3.editor.width=900
 target3.editor.x=0
@@ -131,7 +175,10 @@ target3.name=WhiteBag
 target3.naviview.expanded=false
 target3.showInterface=false
 target3.type=ClassTarget
+<<<<<<< HEAD
 target3.typeParameters=
+=======
+>>>>>>> origin/master
 target3.width=80
 target3.x=450
 target3.y=110
@@ -144,6 +191,7 @@ target4.name=EmptyBagException
 target4.naviview.expanded=false
 target4.showInterface=false
 target4.type=ClassTarget
+<<<<<<< HEAD
 target4.typeParameters=
 target4.width=140
 target4.x=10
@@ -152,12 +200,24 @@ target5.editor.height=754
 target5.editor.width=1382
 target5.editor.x=-8
 target5.editor.y=-8
+=======
+target4.width=140
+target4.x=10
+target4.y=120
+target5.editor.height=1030
+target5.editor.width=973
+target5.editor.x=943
+target5.editor.y=25
+>>>>>>> origin/master
 target5.height=50
 target5.name=PebbleGame
 target5.naviview.expanded=false
 target5.showInterface=false
 target5.type=ClassTarget
+<<<<<<< HEAD
 target5.typeParameters=
+=======
+>>>>>>> origin/master
 target5.width=100
 target5.x=170
 target5.y=30
@@ -170,6 +230,7 @@ target6.name=BlackBag
 target6.naviview.expanded=true
 target6.showInterface=false
 target6.type=ClassTarget
+<<<<<<< HEAD
 target6.typeParameters=
 target6.width=80
 target6.x=280
@@ -178,11 +239,21 @@ target7.editor.height=741
 target7.editor.width=900
 target7.editor.x=450
 target7.editor.y=235
+=======
+target6.width=80
+target6.x=280
+target6.y=110
+target7.editor.height=700
+target7.editor.width=900
+target7.editor.x=1020
+target7.editor.y=316
+>>>>>>> origin/master
 target7.height=50
 target7.name=WinnerEventListener
 target7.naviview.expanded=true
 target7.showInterface=false
 target7.type=InterfaceTarget
+<<<<<<< HEAD
 target7.typeParameters=
 target7.width=140
 target7.x=0
@@ -191,12 +262,24 @@ target8.editor.height=738
 target8.editor.width=900
 target8.editor.x=473
 target8.editor.y=0
+=======
+target7.width=140
+target7.x=420
+target7.y=510
+target8.editor.height=700
+target8.editor.width=900
+target8.editor.x=26
+target8.editor.y=227
+>>>>>>> origin/master
 target8.height=50
 target8.name=EventGeneratorThread
 target8.naviview.expanded=true
 target8.showInterface=false
 target8.type=ClassTarget
+<<<<<<< HEAD
 target8.typeParameters=
+=======
+>>>>>>> origin/master
 target8.width=150
 target8.x=540
 target8.y=70
@@ -209,7 +292,10 @@ target9.name=IllegalPlayerNumberException
 target9.naviview.expanded=true
 target9.showInterface=false
 target9.type=ClassTarget
+<<<<<<< HEAD
 target9.typeParameters=
+=======
+>>>>>>> origin/master
 target9.width=190
 target9.x=10
 target9.y=240
