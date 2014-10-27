@@ -20,6 +20,7 @@ public class BlackBag extends Bag
     public int takePebble()
     {
         if (pebbles.length == 0) {
+            
             return -1;
         } else {
             Random rand = new Random();

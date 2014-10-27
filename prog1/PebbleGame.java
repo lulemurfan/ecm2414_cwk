@@ -9,6 +9,7 @@ public class PebbleGame
 {
     public static BlackBag[] bagArray;
     public static EventGeneratorThread generatorThread;
+    public static Player[] players;
     public static void main(String[] args)
     {
         WhiteBag A = new WhiteBag();
@@ -56,6 +57,7 @@ public class PebbleGame
             }
             catch(WeveGotAWinnerException e){
                 String PebbleGameWinner = e.name;
+                System.out.println("Exception");
                 
                 
             }
