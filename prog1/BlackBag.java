@@ -17,12 +17,13 @@ public class BlackBag extends Bag
         corresponding = corres;
     }
 
-    public int takePebble()
-    {
-        if (pebbles.length == 0) {
+    public int takePebble throws E()    public int takePebble() throws EmptyBagException()
+    
+        if (pebbles.length == 0 && corresponding.getLength() == 0) {
+            throw new EmptyBagException();
+        }          
             
-            return -1;
-        } else {
+        else {
             Random rand = new Random();
             int n = rand.nextInt(pebbles.length);
             int val = pebbles[n];
@@ -39,14 +40,13 @@ public class BlackBag extends Bag
             
             return val;
         }
-    }
-    
-    public int numberOfPebbles()
+    }}    
+   public int numberOfPebbles()
     {
         return pebbles.length;
     }
-    
-    /**
+
+        /**
      * Will take an array of pebbles from a White bag
      * 
      */
@@ -54,20 +54,21 @@ public class BlackBag extends Bag
     {
         pebbles = peb;
     }
+
     
-    void makeArray(int[] a){
+   void makeArray(int[] a){
         int[] pebbles = new int[a.length];
         for(int i=0; i<a.length;i++){
             pebbles[i] = a[i];
         }
     }
-    
-    void putPebbleInWhite(int peb)
+
+        void putPebbleInWhite(int peb)
     {
         corresponding.addPebble(peb);
     }
-    
-    void takeCorrespondingPebbles()
+
+        void takeCorrespondingPebbles()
     {   int[] a;
         a = corresponding.takeBag(this);
         //int[] pebbles = corresponding.takeBag(this);

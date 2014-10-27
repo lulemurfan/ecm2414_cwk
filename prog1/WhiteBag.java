@@ -30,4 +30,10 @@ public class WhiteBag extends Bag
         return tmp;
         
    }
+   
+   public int getLength(){
+       return pebbles.length;
+    }
+    
+   
 }
