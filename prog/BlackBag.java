@@ -17,7 +17,7 @@ public class BlackBag extends Bag
         corresponding = corres;
     }
 
-    public synchronized int takePebble()
+    public int takePebble()
     {
         if (pebbles.length == 0) {
             return -1;
@@ -49,7 +49,7 @@ public class BlackBag extends Bag
      * Will take an array of pebbles from a White bag
      * 
      */
-    public synchronized void addPebbles(int[] peb)
+    public void addPebbles(int[] peb)
     {
         pebbles = peb;
     }
@@ -59,7 +59,7 @@ public class BlackBag extends Bag
         corresponding.addPebble(peb);
     }
     
-    synchronized void takeCorrespondingPebbles()
+    void takeCorrespondingPebbles()
     {   
         addPebbles(corresponding.takeBag());
     }

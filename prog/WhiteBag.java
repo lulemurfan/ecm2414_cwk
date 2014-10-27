@@ -12,7 +12,7 @@ public class WhiteBag extends Bag
     }
 
 
-    public synchronized void addPebble(int peb)
+    public void addPebble(int peb)
     {
         int[] tmp = new int[pebbles.length+1];
         for (int i = 0; i < pebbles.length; i++)
@@ -26,5 +26,5 @@ public class WhiteBag extends Bag
         pebbles = new int[0];
         return tmp;
         
-    }
+   }
 }

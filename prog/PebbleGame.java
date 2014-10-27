@@ -50,21 +50,23 @@ public class PebbleGame
         
         private void init()
         {
+            int largest = Integer.MIN_VALUE;
+            BlackBag largeBag = null;
             for(int i=0;i<10;i++)
             {
-                int largest = Integer.MIN_VALUE;
-                BlackBag largeBag = null;
                 for(BlackBag bag : PebbleGame.bagArray){
-                    synchronized(this)
-                    {
-                        if(bag.numberOfPebbles() > largest){
-                            largest =  bag.numberOfPebbles();
-                            largeBag = bag;
-                        }
+                    
+                    if(bag.numberOfPebbles() > largest){
+                        largest =  bag.numberOfPebbles();
+                        largeBag = bag;
                     }
+                    
                 }
                 hand[i] = largeBag.takePebble();
-                }     
+          
+                    
+                }    
+                
             }
         }
     }
