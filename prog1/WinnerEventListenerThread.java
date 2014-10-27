@@ -5,10 +5,9 @@ public class WinnerEventListenerThread extends Thread implements WinnerEventList
     
     public void simpleOccuranceEvent(WinnerEvent evt) throws WeveGotAWinnerException{
         System.out.println("WinnerEventListener successfully called");
-        if((PebbleGame.Player) evt instanceof PebbleGame.Player){
-            ((PebbleGame.Player) evt).stop();
-            System.out.println("WE'VE GOT A WINNNNERR");
-        }
+        ((PebbleGame.Player)(Object)evt).stop();
+        System.out.println("WE'VE GOT A WINNNNERR");
+        
         
         throw new WeveGotAWinnerException();
         
