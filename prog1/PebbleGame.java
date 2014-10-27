@@ -55,7 +55,8 @@ public class PebbleGame
                 }
             }
             catch(WeveGotAWinnerException e){
-            
+                String PebbleGameWinner = e.name;
+                
                 
             }
 
