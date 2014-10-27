@@ -27,27 +27,34 @@ public class PebbleGame
         public void run()
         {
             init();
-            while(true)
-            {
-                Random rand = new Random();
-                int n = rand.nextInt(PebbleGame.bagArray.length);
-                int newPebble = PebbleGame.bagArray[n].takePebble();
-                
-                int weight = newPebble;
-                for (int i : hand)
-                    weight += i;
-                if (weight == 100)
+            try{ 
+                while(true)
+                {
+                    Random rand = new Random();
+                    int n = rand.nextInt(PebbleGame.bagArray.length);
+                    int newPebble = PebbleGame.bagArray[n].takePebble();
+
+                    int weight = newPebble;
+                    for (int i : hand)
+                        weight += i;
+                    if (weight == 100)
                     ;//event
-                int a = rand.nextInt(10);
-                if (a == 9) {
-                    PebbleGame.bagArray[n].putPebbleInWhite(newPebble);
-                } else {
-                    PebbleGame.bagArray[n].putPebbleInWhite(hand[a]);
-                    hand[a]=newPebble;
+                    int a = rand.nextInt(10);
+                    if (a == 9) {
+                        PebbleGame.bagArray[n].putPebbleInWhite(newPebble);
+                    } else {
+                        PebbleGame.bagArray[n].putPebbleInWhite(hand[a]);
+                        hand[a]=newPebble;
+                    }
                 }
             }
+            catch(WeveGotAWinnerException e){
+            
+                
+            }
+
         }
-        
+
         private void init()
         {
             int largest = Integer.MIN_VALUE;
@@ -55,19 +62,17 @@ public class PebbleGame
             for(int i=0;i<10;i++)
             {
                 for(BlackBag bag : PebbleGame.bagArray){
-                    
+
                     if(bag.numberOfPebbles() > largest){
                         largest =  bag.numberOfPebbles();
                         largeBag = bag;
                     }
-                    
+
                 }
                 hand[i] = largeBag.takePebble();
-          
-                    
-                }    
-                
-            }
+
+            }    
         }
     }
+}
 
