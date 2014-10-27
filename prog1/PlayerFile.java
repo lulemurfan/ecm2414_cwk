@@ -11,7 +11,9 @@ public class PlayerFile {
         try 
         {
             file = new File("player"+ String.valueOf(player) + "_output.txt");
-            file.createNewFile(); //At the start of the program create a new file
+            (new BufferedWriter(new FileWriter(file.getAbsoluteFile()))).write("");
+            //At the start of the program create a new file
+            
         } catch (IOException e) {System.out.println("Error");}
     }
     
