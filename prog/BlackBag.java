@@ -46,7 +46,7 @@ public class BlackBag extends Bag
     }
     
     /**
-     * Will take an array of pebbles from a White bag
+     * Will take an array of pebbles from a White  bbag
      * 
      */
     public void addPebbles(int[] peb)
