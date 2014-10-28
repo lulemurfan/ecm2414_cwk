@@ -47,7 +47,7 @@ public class PebbleGame
         generatorThread.start();
         
     }
-    
+
     private static int makePlayers(String noOfPlayers) throws IllegalPlayerNumberException
     {
         int noPlayers;

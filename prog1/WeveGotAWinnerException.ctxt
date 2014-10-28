@@ -3,4 +3,5 @@ comment0.params=
 comment0.target=WeveGotAWinnerException()
 comment1.params=throwingName
 comment1.target=WeveGotAWinnerException(java.lang.String)
+comment1.text=\r\n\ Overloaded\ constructor\ with\ argument\ String\ throwingName,\ used\ to\ pass\ the\ name\ of\ the\r\n\ winner\ into\ the\ exception\r\n\ @overloaded\r\n\ \r\n
 numComments=2
