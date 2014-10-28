@@ -31,14 +31,20 @@ public class PebbleGame
         private int[] hand = new int[9]; //Having a length of 9 stop the expansion/shrinking of the array
         public void run()
         {
-            init();
+            try{
+                init();
+            }
+           catch(EmptyBagException e){
+                System.out.println("EmptyBagException, this probably shouldn't happen");
+                System.exit(0);
+            }
             try{ 
                 while(true)
                 {
                     Random rand = new Random();
                     int n = rand.nextInt(PebbleGame.bagArray.length);
                     int newPebble = PebbleGame.bagArray[n].takePebble();
-
+                        
                     int weight = newPebble;
                     for (int i : hand)
                         weight += i;
@@ -55,17 +61,25 @@ public class PebbleGame
                     }
                 }
             }
-            catch(WeveGotAWinnerException e){
-                String PebbleGameWinner = e.name;
+            catch(WeveGotAWinnerException winnerEvt){
+                String PebbleGameWinner = winnerEvt.name;
                 System.out.println("Exception");
                 
                 
             }
+            catch(EmptyBagException emptyBag){
+                System.out.println("Yo Jonathan it seems yo test work'd");
+                System.exit(0);
+            }
+            
+            
+
 
         }
+    
 
-        private void init()
-        {
+        private void init() throws EmptyBagException {
+            
             int largest = Integer.MIN_VALUE;
             BlackBag largeBag = null;
             for(int i=0;i<10;i++)
