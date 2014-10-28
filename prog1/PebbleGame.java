@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Arrays;
 /**
  * Write a description of class PebbleGame here.
  * 
@@ -49,23 +50,36 @@ public class PebbleGame
                     int n = rand.nextInt(PebbleGame.bagArray.length);
                     int newPebble = PebbleGame.bagArray[n].takePebble();
                     playerFile.write("player"+playerID+" has drawn a "+newPebble+" from bag"+PebbleGame.bagArray[n].getName());
+                    playerFile.write("player"+playerID+" hand is "+ Arrays.toString(hand)+ newPebble);
+                    
                     int weight = newPebble;
                     for (int i : hand)
                         weight += i;
                     if (weight == 100){
                         PebbleGame.generatorThread.fireWinnerEvent(new WinnerEvent(this));
+                    //    playerFile.write("player"+playerID+"has won");
                         
                     }
                     int a = rand.nextInt(10);
                     if (a == 9) {
                         PebbleGame.bagArray[n].putPebbleInWhite(newPebble);
+                        playerFile.write("player"+playerID+" has discarded a " + newPebble + " to bag"+PebbleGame.bagArray[n].getName());
                     } else {
                         PebbleGame.bagArray[n].putPebbleInWhite(hand[a]);
+                        playerFile.write("player"+playerID+" has discarded a " + hand[a] + " to bag"+PebbleGame.bagArray[n].getName());
                         hand[a]=newPebble;
                     }
+                    playerFile.write("player"+playerID+" hand is "+ Arrays.toString(hand)+ newPebble);
                 }
             }
             catch(WeveGotAWinnerException winnerEvt){
+                if(winnerEvt.name == this.getName()){
+                    playerFile.write("player"+playerID+"has won");
+                }
+                else{
+                    playerFile.write("player "+playerID+" has lost, "+"as "+winnerEvt.name+" has won");
+                }
+                
                 String PebbleGameWinner = winnerEvt.name;
                 System.out.println("Exception");
                 
