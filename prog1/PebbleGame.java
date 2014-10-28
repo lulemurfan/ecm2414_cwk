@@ -12,16 +12,16 @@ public class PebbleGame
     public static Player[] players;
     public static void main(String[] args)
     {
-        WhiteBag A = new WhiteBag();
-        WhiteBag B = new WhiteBag();
-        WhiteBag C = new WhiteBag();
+        WhiteBag A = new WhiteBag("A");
+        WhiteBag B = new WhiteBag("B");
+        WhiteBag C = new WhiteBag("C");
         int[] t1 = null;
         int[] t2 = null;
         int[] t3 = null;
         BlackBag[] bagArray = new BlackBag[3];
-        bagArray[0] = new BlackBag(t1,A);
-        bagArray[1] = new BlackBag(t2,B);
-        bagArray[2] = new BlackBag(t3,C);
+        bagArray[0] = new BlackBag(t1,A, "X");
+        bagArray[1] = new BlackBag(t2,B, "Y");
+        bagArray[2] = new BlackBag(t3,C, "Z");
         EventGeneratorThread generatorThread = new EventGeneratorThread();
         generatorThread.start();
         
@@ -29,6 +29,10 @@ public class PebbleGame
     class Player extends Thread
     {
         private int[] hand = new int[9]; //Having a length of 9 stop the expansion/shrinking of the array
+        private int playerID = (int) Thread.currentThread().getId();
+        private PlayerFile playerFile = new PlayerFile(playerID);
+       
+        
         public void run()
         {
             try{
@@ -44,7 +48,7 @@ public class PebbleGame
                     Random rand = new Random();
                     int n = rand.nextInt(PebbleGame.bagArray.length);
                     int newPebble = PebbleGame.bagArray[n].takePebble();
-                        
+                    playerFile.write("player"+playerID+" has drawn a "+newPebble+" from bag"+PebbleGame.bagArray[n].getName());
                     int weight = newPebble;
                     for (int i : hand)
                         weight += i;

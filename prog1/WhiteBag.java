@@ -3,13 +3,15 @@ public class WhiteBag extends Bag
 {
     private int[] pebbles;
     private int[] tmp;
+    private String bagName;
     
     /**
      * Constructor for objects of class WhiteBag
      */
-    public WhiteBag()
+    public WhiteBag(String bagName)
     {
         pebbles = new int[0];
+        this.bagName = bagName;
     }
 
 
@@ -30,6 +32,10 @@ public class WhiteBag extends Bag
         return tmp;
         
    }
+   
+   public String getName(){
+        return bagName;
+    }
    
    public int getLength(){
        return pebbles.length;

@@ -6,6 +6,7 @@ import java.io.PrintStream;
  
 public class PlayerFile {
     private File file;
+    
     public PlayerFile (int player)
     {
         try 

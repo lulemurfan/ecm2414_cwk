@@ -5,16 +5,17 @@ public class BlackBag extends Bag
 {
     private WhiteBag corresponding;
     private int[] pebbles;
-    
+    private String bagName;
     
     
     /**
      * Constructor for objects of class BlackBag
      */
-    public BlackBag(int[] peb, WhiteBag corres)
+    public BlackBag(int[] peb, WhiteBag corres, String bagName)
     {
         pebbles = peb;
         corresponding = corres;
+        this.bagName = bagName;
     }
     
     public int takePebble() throws EmptyBagException{
@@ -54,6 +55,10 @@ public class BlackBag extends Bag
     public void addPebbles(int[] peb)
     {
         pebbles = peb;
+    }
+    
+    public String getName(){
+        return bagName;
     }
 
     
