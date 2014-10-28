@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=filename
+comment0.target=BagFile(java.lang.String)
+comment1.params=
+comment1.target=int[]\ getPebbles()
+numComments=2
