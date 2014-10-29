@@ -1,18 +1,20 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
- 
+import java.io.File;
 public class BagFile {
     private FileReader fr;
+    private File file;
     public BagFile (String filename)
     {
         try
         {
-            fr = new FileReader(filename + ".txt");
-        } catch (IOException e) {}
+            file = new File(filename);
+            fr = new FileReader(file.getAbsoluteFile());
+        } catch (IOException e) {System.out.println("Error");}
     }
    
-    public int[] getPebbles() {
+    public int[] getPebbles() throws IllegalFileFormatValueException{
  
         try 
         { 
@@ -27,8 +29,13 @@ public class BagFile {
             br.close();
             return temp;
         }
-        catch (IOException e) {return new int[0];}
-        catch (NullPointerException e) {return new int[0];}
+        catch (IOException e) {
+            //throw new IllegalFileFormatValueException();
+            return new int[0];
+        }
+        catch (NullPointerException e) {
+            throw new IllegalFileFormatValueException();
+        }
  
     }
 }

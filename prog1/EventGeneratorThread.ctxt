@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=t
 comment0.target=void\ addWinnerEventListener(WinnerEventListener)
+comment0.text=\n\ \ addWinnerEventListener\ adds\ the\ argument\ t\ (type\ WinnerEventListener)\ to\ the\ listeners\ array.\ It\ returns\ nothing\ as\ it\ is\ void.\ \n\ \ \n
 comment1.params=evt
 comment1.target=void\ fireWinnerEvent(WinnerEvent)
+comment1.text=\n\ fireWinnerEvent\ fires\ the\ event\ passed\ to\ it\ in\ the\ argument,\ the\ event\ is\ of\ type\ WinnerEvent\ and\ is\ assigned\ to\ evt.\ Returns\ nothing\ as\ it's\ void.\n\ Throws\ a\ WeveGotAWinnerException\ exception.\n\ \n
 numComments=2
