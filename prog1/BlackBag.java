@@ -34,7 +34,7 @@ public class BlackBag extends Bag
      * bag is empty. Has no arguments.
      * 
      */
-    public int takePebble() throws EmptyBagException{
+    public synchronized int takePebble() throws EmptyBagException{
         
         
         if (pebbles.length == 0 && corresponding.getLength() == 0) { //if both bags are empty
@@ -43,6 +43,9 @@ public class BlackBag extends Bag
 
         else {
             Random rand = new Random(); //create new Random instance
+            System.out.println(pebbles.length);
+            if (pebbles.length == 0) //if pebbles = empty
+                Thread.yield(); //take white bag's pebbles
             int n = rand.nextInt(pebbles.length); //generate random integer
             int val = pebbles[n];
 
@@ -71,7 +74,7 @@ public class BlackBag extends Bag
     /**
      * Sets the pebbles array to the new array of argument int[] peb.
      */
-    public void addPebbles(int[] peb)
+    public synchronized void addPebbles(int[] peb)
     {
         pebbles = peb;
     }
@@ -104,14 +107,11 @@ public class BlackBag extends Bag
     /**
      * takes the white bag's pebbles
      */
-    void takeCorrespondingPebbles()
-    {   int[] a;
+    synchronized void takeCorrespondingPebbles()
+    {   
+        System.out.println("Taking Pebs");
+        int[] a;
         a = corresponding.takeBag(this);
         //int[] pebbles = corresponding.takeBag(this);
-    }
-    
-    public int[] seePeb()
-    {
-        return pebbles;
     }
 }

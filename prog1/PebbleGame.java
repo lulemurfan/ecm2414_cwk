@@ -126,14 +126,9 @@ public class PebbleGame
                 System.exit(0);
             } 
             
-            
             bagArray[0] = new BlackBag(t1,A, "X");
             bagArray[1] = new BlackBag(t2,B, "Y");
             bagArray[2] = new BlackBag(t3,C, "Z");
-            
-            for(BlackBag bag : bagArray){
-                System.out.println(Arrays.toString(bag.seePeb()));
-            }
             
             EventGeneratorThread generatorThread = new EventGeneratorThread();
             generatorThread.start();
@@ -155,9 +150,6 @@ public class PebbleGame
         {
             players[i].start();
         }
-        for(BlackBag bag : bagArray){
-                System.out.println(Arrays.toString(bag.seePeb()));
-            }
     }
     private int makePlayers(String noOfPlayers) throws IllegalPlayerNumberException
     {
@@ -176,13 +168,5 @@ public class PebbleGame
             players[i] = new Player(i,this);
         }
         return noPlayers;
-    }
-    private void makeBags() 
-    {
-     
-    }
-    public BlackBag[] getBags()
-    {
-        return bagArray;
     }
 }

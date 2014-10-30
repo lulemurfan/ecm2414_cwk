@@ -20,7 +20,7 @@ public class WhiteBag extends Bag
     /**
      * A method to add a single pebble to the white bag.
      */
-    public void addPebble(int peb)
+    public synchronized void addPebble(int peb)
     {
         int[] tmp = new int[pebbles.length+1];
         for (int i = 0; i < pebbles.length; i++)
@@ -32,7 +32,7 @@ public class WhiteBag extends Bag
     /**
      * A method which is called by BlackBag to return the whole object and set the bag as empty.
      */
-    public int[] takeBag(BlackBag b)
+    public synchronized int[] takeBag(BlackBag b)
     {
         int[] tmp = pebbles.clone(); //Make a deep copy
         pebbles = new int[0]; //Set the bag of pebbles as empty

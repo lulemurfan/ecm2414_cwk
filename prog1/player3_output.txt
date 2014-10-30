@@ -1,4 +1,0 @@
-player3 has drawn a 1 from bagX
-player3 hand is [1, 78, 1, 1, 1, 17, 89, 45, 1]1
-player3 has discarded a 89 to bagX
-player3 hand is [1, 78, 1, 1, 1, 17, 1, 45, 1]1

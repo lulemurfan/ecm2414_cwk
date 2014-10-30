@@ -23,6 +23,4 @@ comment6.text=\n\ Places\ a\ pebble\ into\ the\ white\ bag\n
 comment7.params=
 comment7.target=void\ takeCorrespondingPebbles()
 comment7.text=\n\ takes\ the\ white\ bag's\ pebbles\n
-comment8.params=
-comment8.target=int[]\ seePeb()
-numComments=9
+numComments=8
