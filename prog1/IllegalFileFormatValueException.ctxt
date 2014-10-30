@@ -1,4 +1,5 @@
 #BlueJ class context
 comment0.params=
 comment0.target=IllegalFileFormatValueException()
+comment0.text=\n\ Constructor\ to\ call\ the\ Exception\ constructor\n
 numComments=1

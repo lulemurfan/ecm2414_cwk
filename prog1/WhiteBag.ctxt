@@ -1,13 +1,17 @@
 #BlueJ class context
 comment0.params=bagName
 comment0.target=WhiteBag(java.lang.String)
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ WhiteBag\n
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ WhiteBag\ which\ stores\ the\ bag\ name\n
 comment1.params=peb
 comment1.target=void\ addPebble(int)
+comment1.text=\n\ A\ method\ to\ add\ a\ single\ pebble\ to\ the\ white\ bag.\n
 comment2.params=b
 comment2.target=int[]\ takeBag(BlackBag)
+comment2.text=\n\ A\ method\ which\ is\ called\ by\ BlackBag\ to\ return\ the\ whole\ object\ and\ set\ the\ bag\ as\ empty.\n
 comment3.params=
 comment3.target=java.lang.String\ getName()
+comment3.text=\n\ Method\ to\ return\ the\ bag\ name\n
 comment4.params=
 comment4.target=int\ getLength()
+comment4.text=\n\ Method\ to\ return\ the\ length\ of\ the\ bag\n
 numComments=5
