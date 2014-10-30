@@ -1,0 +1,2 @@
+player0 has drawn a 1 from bagX
+player0 hand is [12, 1, 1, 1, 1, 14, 56, 12, 1]1

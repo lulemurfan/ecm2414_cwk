@@ -2,25 +2,28 @@ import java.util.Random;
 import java.util.Arrays;
 
 /**
- * Write a description of class PebbleGame here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * The PebbleGame, it creates X number of players (depending on the input at the terminal)
  */
 public class PebbleGame
 {
+    /**
+     * Player is the object which 'plays' the game, which runs on their own thread.
+     */
     class Player extends Thread
     {
         private int[] hand = new int[9]; //Having a length of 9 stop the expansion/shrinking of the array
         private int playerID;
         private PlayerFile playerFile;
+        private PebbleGame currentGame;
 
-        public Player (int pID) {
+        public Player (int pID, PebbleGame outer) {
             playerID = pID;
             playerFile = new PlayerFile(playerID);
+            currentGame = outer;
         }
         public void run()
         {
+            System.out.println(Thread.currentThread().getName() + " started");
             try{
                 init();
             }
@@ -81,9 +84,11 @@ public class PebbleGame
 
             int largest = Integer.MIN_VALUE;
             BlackBag largeBag = null;
-            for(int i=0;i<10;i++)
+            
+            BlackBag[] bags = currentGame.bagArray;
+            for(int i=0;i<9;i++)
             {
-                for(BlackBag bag : PebbleGame.bagArray){
+                for(BlackBag bag : bags){
 
                     if(bag.numberOfPebbles() > largest){
                         largest =  bag.numberOfPebbles();
@@ -91,12 +96,13 @@ public class PebbleGame
                     }
 
                 }
+                System.out.println(largeBag);
                 hand[i] = largeBag.takePebble();
 
             }    
         }
     }
-    public static BlackBag[] bagArray;
+    public static BlackBag[] bagArray = new BlackBag[3];
     public static EventGeneratorThread generatorThread;
     public static Player[] players;
     public static void main(String[] args)
@@ -113,18 +119,28 @@ public class PebbleGame
             t1 = (new BagFile(args[0])).getPebbles();
             t2 = (new BagFile(args[1])).getPebbles();
             t3 = (new BagFile(args[2])).getPebbles();
-            int noOfPlayers = makePlayers(args[3]);
+            int noOfPlayers = (new PebbleGame()).makePlayers(args[3]);
 
             if ((t1.length + t2.length + t3.length) < (9*noOfPlayers)) {
                 System.out.println("You need to make sure that the number of pebbles is bigger than 9*no of players");
                 System.exit(0);
             } 
-            BlackBag[] bagArray = new BlackBag[3];
+            
+            
             bagArray[0] = new BlackBag(t1,A, "X");
             bagArray[1] = new BlackBag(t2,B, "Y");
             bagArray[2] = new BlackBag(t3,C, "Z");
+            
+            for(BlackBag bag : bagArray){
+                System.out.println(Arrays.toString(bag.seePeb()));
+            }
+            
             EventGeneratorThread generatorThread = new EventGeneratorThread();
             generatorThread.start();
+            System.out.println("Threads started");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("There wasn't enough arguments given, e.g file1.txt file2.txt file3.txt 7");
+            System.exit(0);
         } catch (NullPointerException e) {
             System.out.println("There wasn't enough arguments given, e.g file1.txt file2.txt file3.txt 7");
             System.exit(0);
@@ -135,10 +151,15 @@ public class PebbleGame
             System.out.println("The format of the input files are incorrect");
             System.exit(0);
         }
-
-        
+        for (int i=0; i < players.length; i++)
+        {
+            players[i].start();
+        }
+        for(BlackBag bag : bagArray){
+                System.out.println(Arrays.toString(bag.seePeb()));
+            }
     }
-    private static int makePlayers(String noOfPlayers) throws IllegalPlayerNumberException
+    private int makePlayers(String noOfPlayers) throws IllegalPlayerNumberException
     {
 
         int noPlayers;
@@ -152,10 +173,16 @@ public class PebbleGame
             throw new IllegalPlayerNumberException();
         }
         for (int i = 0; i < noPlayers; i++) {
-            players[i] = (new PebbleGame()).new Player(i);
+            players[i] = new Player(i,this);
         }
-        System.out.println(players.length);
         return noPlayers;
     }
-
+    private void makeBags() 
+    {
+     
+    }
+    public BlackBag[] getBags()
+    {
+        return bagArray;
+    }
 }

@@ -1,0 +1,36 @@
+player1 has drawn a 45 from bagX
+player1 hand is [1, 1, 1, 1, 1, 14, 56, 45, 12]45
+player1 has discarded a 1 to bagX
+player1 hand is [45, 1, 1, 1, 1, 14, 56, 45, 12]45
+player1 has drawn a 1 from bagZ
+player1 hand is [45, 1, 1, 1, 1, 14, 56, 45, 12]1
+player1 has discarded a 1 to bagZ
+player1 hand is [45, 1, 1, 1, 1, 14, 56, 45, 12]1
+player1 has drawn a 78 from bagY
+player1 hand is [45, 1, 1, 1, 1, 14, 56, 45, 12]78
+player1 has discarded a 1 to bagY
+player1 hand is [45, 78, 1, 1, 1, 14, 56, 45, 12]78
+player1 has drawn a 1 from bagZ
+player1 hand is [45, 78, 1, 1, 1, 14, 56, 45, 12]1
+player1 has discarded a 56 to bagZ
+player1 hand is [45, 78, 1, 1, 1, 14, 1, 45, 12]1
+player1 has drawn a 12 from bagZ
+player1 hand is [45, 78, 1, 1, 1, 14, 1, 45, 12]12
+player1 has discarded a 14 to bagZ
+player1 hand is [45, 78, 1, 1, 1, 12, 1, 45, 12]12
+player1 has drawn a 1 from bagX
+player1 hand is [45, 78, 1, 1, 1, 12, 1, 45, 12]1
+player1 has discarded a 45 to bagX
+player1 hand is [45, 78, 1, 1, 1, 12, 1, 1, 12]1
+player1 has drawn a 78 from bagX
+player1 hand is [45, 78, 1, 1, 1, 12, 1, 1, 12]78
+player1 has discarded a 1 to bagX
+player1 hand is [45, 78, 78, 1, 1, 12, 1, 1, 12]78
+player1 has drawn a 78 from bagX
+player1 hand is [45, 78, 78, 1, 1, 12, 1, 1, 12]78
+player1 has discarded a 1 to bagX
+player1 hand is [45, 78, 78, 1, 1, 12, 1, 78, 12]78
+player1 has drawn a 17 from bagX
+player1 hand is [45, 78, 78, 1, 1, 12, 1, 78, 12]17
+player1 has discarded a 12 to bagX
+player1 hand is [45, 78, 78, 1, 1, 17, 1, 78, 12]17

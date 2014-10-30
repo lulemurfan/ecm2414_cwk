@@ -29,7 +29,7 @@ public class PlayerFile {
     {
         try 
         {
- 			FileWriter fw = new FileWriter(file.getAbsoluteFile(), true); //,
+ 			FileWriter fw = new FileWriter(file.getAbsoluteFile(), true); //'true' is set to append on the file
 			BufferedWriter bw = new BufferedWriter(fw);
 			bw.append(str);
 			bw.newLine();

@@ -109,4 +109,9 @@ public class BlackBag extends Bag
         a = corresponding.takeBag(this);
         //int[] pebbles = corresponding.takeBag(this);
     }
+    
+    public int[] seePeb()
+    {
+        return pebbles;
+    }
 }
