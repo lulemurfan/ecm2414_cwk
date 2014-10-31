@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=filename
 comment0.target=BagFile(java.lang.String)
-comment0.text=\n\ Constructor\ which\ stores\ sets\ the\ file\ name/location\ to\ be\ used\ in\ the\ object\n
+comment0.text=\r\n\ Constructor\ which\ stores\ sets\ the\ file\ name/location\ to\ be\ used\ in\ the\ object\r\n
 comment1.params=
 comment1.target=int[]\ getPebbles()
-comment1.text=\n\ This\ method\ gets\ the\ pebbles\ from\ the\ file\ and\ returns\ an\ array\ of\ pebbles\n
+comment1.text=\r\n\ This\ method\ gets\ the\ pebbles\ from\ the\ file\ and\ returns\ an\ array\ of\ pebbles\r\n
 numComments=2

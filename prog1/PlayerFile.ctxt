@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=player
 comment0.target=PlayerFile(int)
-comment0.text=\n\ Constructor\ of\ the\ player\ file\ which\ sets\ up\ the\ file\ and\ the\ location\n
+comment0.text=\r\n\ Constructor\ of\ the\ player\ file\ which\ sets\ up\ the\ file\ and\ the\ location\r\n
 comment1.params=str
 comment1.target=void\ write(java.lang.String)
-comment1.text=\n\ Method\ to\ write\ a\ new\ line\ to\ file\ each\ time\ with\ the\ given\ input\ string\n
+comment1.text=\r\n\ Method\ to\ write\ a\ new\ line\ to\ file\ each\ time\ with\ the\ given\ input\ string\r\n
 numComments=2

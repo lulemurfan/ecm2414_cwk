@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.params=evt
 comment0.target=void\ simpleOccuranceEvent(WinnerEvent)
-comment0.text=\n\ This\ method\ throws\ a\ WeveGotAWinnerException.\ It\ takes\ argument\ WinnerEvent.\n\ \n
+comment0.text=\r\n\ This\ method\ throws\ a\ WeveGotAWinnerException.\ It\ takes\ argument\ WinnerEvent.\r\n\ \r\n
 numComments=1
